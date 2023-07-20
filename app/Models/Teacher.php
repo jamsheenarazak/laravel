@@ -11,7 +11,9 @@ class Teacher extends Model
     protected $fillable = [
         'name',
         'subject',
-        'phone',
         'email',
     ];
+    public function phone(){
+        return $this->hasOne(Phone::class);
+    }
 }
